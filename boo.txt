@@ -3,3 +3,9 @@ git flow でfeatureブランチreleaseブランチをstartすると
 ブランチはdevelopブランチから作成される。
 hotfixブランチをstartすると
 ブランチはmasterブランチから作成される。
+
+リモート側　origin/develop をチェックアウトすると
+HEAD detached at origin/develop
+となり、リモート側の状態を確認できる。
+
+git checkout develop するとHEAD detached は解除される。
