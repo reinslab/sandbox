@@ -1,0 +1,39 @@
+■ git flow 作業手順
+
+事前準備：
+　1.リモートリポジトリをクローンする
+  　$ git clone git@github.com:reinslab/xxxx.git
+
+　2.リモートリポジトリの develop ブランチを upstream（追跡）するローカルブランチ（develop）を作成する
+  　$ git checkout -b develop origin/develop
+
+　3. git pull のデフォルト（省略されたリモート名）確認する
+　　$ git branch -vv
+
+　4. git flow の初期化をする
+　　$ git flow init
+
+実際の開発の流れ：
+　1. git flow をスタートする（featureA は開発ブランチ名）
+　　$ git flow feature start featureA
+
+　2.作成した feature ブランチで作業（開発・修正等）を行う
+
+　3.インデックス（ステージ）する
+　　$ git add xxxx.txt
+
+　4.コミットする
+　　$ git commit -m "何かコメント"
+
+　5. git flow をフィニッシュする
+　　$ git folow feature finish featureA
+
+　6.リモートの develop ブランチへプッシュする
+　　$ git push
+
+tips：
+　■ add と commit をまとめて行う
+　　$ git commit -am "何かコメント"
+
+　■ 直前のコミットを打ち消す
+　　$ git commit --amend -m "何かコメント"
