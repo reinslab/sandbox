@@ -1,1 +1,5 @@
 何にもしないをしてる
+git flow でfeatureブランチreleaseブランチをstartすると
+ブランチはdevelopブランチから作成される。
+hotfixブランチをstartすると
+ブランチはmasterブランチから作成される。
