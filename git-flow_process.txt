@@ -32,8 +32,5 @@
 　　$ git push
 
 tips：
-　■ add と commit をまとめて行う
-　　$ git commit -am "何かコメント"
-
 　■ 直前のコミットを打ち消す
 　　$ git commit --amend -m "何かコメント"
