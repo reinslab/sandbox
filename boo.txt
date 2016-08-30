@@ -21,3 +21,6 @@ detached HEAD は「ブランチから分離したコミット」
 git commit -am "update"
 
 でまとめてaddとcommitができる。
+
+git add xxx.html はOKだが
+git commit xxx.html はNG
