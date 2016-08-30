@@ -9,3 +9,10 @@ HEAD detached at origin/develop
 となり、リモート側の状態を確認できる。
 
 git checkout develop するとHEAD detached は解除される。
+
+detached とは「分離した」「孤立した」という意味で
+
+普通のHEAD：ブランチを指している　HEAD → master → コミット
+detached HEAD：コミットを指している　HEAD → コミット
+
+わからん・・・
