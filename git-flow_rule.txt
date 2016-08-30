@@ -1,0 +1,64 @@
+#**gitflow における基本的な作業手順**
+
+###事前準備
+1.リモートリポジトリをクローンする
+
+```
+　　$ git cloen git@github.com:reinslab/xxxx.git
+```
+クローン直後のブランチの状態
+```
+　　*master
+　　 remotes/origin/HEAD -> origin/master
+　　 remotes/origin/develop
+　　 remotes/origin/master
+```
+2.リモートの develop ブランチをローカルに作成し、upstream（追跡対象）にする
+```
+　　$ git checkout -b develop origin/develop
+```
+ブランチの状態
+```
+　　*develop
+　　 master
+　　 remotes/originHEAD -> origin/master
+　　 remotes/origin/develop
+　　 remotes/origin/master
+ ```
+ 3.git pull のデフォルト（省略されたリモート名）を確認する
+ ```
+ 　　$ git branch -vv
+ ```
+ コマンド実行の結果
+ ```
+ 　　*develop efbf04f [origin/develop] HEAD detached xxx
+　　  master 4c912d4 [origin/master] xxx
+```
+4.git flow を初期化する
+```
+　　$ git flow init
+```
+
+###実際の開発の流れ
+1.git flow をスタートする（featureA ブランチが自動的に作成される）
+```
+　　$ git flow feature start featureA
+```
+2.作成した feature ブランチで作業をする（開発・修正等）
+
+3.インデックス（ステージング）する
+```
+　　$ git add xxxx
+```
+4.コミットする
+```
+　　$ git commit -m "何かコメント"
+```
+5.git flow をフィニッシュする（featureA ブランチは自動的に削除される）
+```
+　　$ git flow feature finish featureA
+```
+6.リモートの develop ブランチへプッシュする
+```
+　　$ git push
+```
