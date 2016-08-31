@@ -8,33 +8,25 @@
 ```
 　　$ git cloen git@github.com:reinslab/xxxx.git
 ```
-クローン直後のブランチの状態
+クローン直後のブランチの状態を確認する
 ```
-　　*master
-　　 remotes/origin/HEAD -> origin/master
-　　 remotes/origin/develop
-　　 remotes/origin/master
+　　$ git branch -a
 ```
-2.リモートの develop ブランチをローカルに作成し、upstream（追跡対象）にする
-```
-　　$ git checkout -b develop origin/develop
-```
-ブランチの状態
+実行結果
 ```
 　　*develop
-　　 master
-　　 remotes/originHEAD -> origin/master
+　　 remotes/origin/HEAD -> origin/develop
 　　 remotes/origin/develop
 　　 remotes/origin/master
- ```
- 3.git pull のデフォルト（省略されたリモート名）を確認する
+　　 remotes/origin/product
+```
+2.upstream（追跡対象）を確認する
  ```
  　　$ git branch -vv
  ```
- コマンド実行の結果
+実行結果
  ```
- 　　*develop efbf04f [origin/develop] HEAD detached xxx
-　　  master 4c912d4 [origin/master] xxx
+ 　　*develop xxxxxxx [origin/develop] xxxxxxx
 ```
 4.git flow を初期化する
 ```
