@@ -1,4 +1,4 @@
-#**gitflow における基本的な作業手順 第3版**
+#**git flow 基本的な作業手順（簡易版）**
 
 詳細は[redmine](http://redmine.wellco-reins.com　”redmine")で確認
 
@@ -10,7 +10,7 @@
 ```
 2.ローカルに clone された作業ディレクトリに移動する
 ```
-　　$cd ec-cube
+　　$cd xxxx
 ```
 
 3.クローン直後のブランチの状態を確認する
