@@ -1,7 +1,6 @@
-#**gitflow における基本的な作業手順 第2版**
+#**gitflow における基本的な作業手順 第3版**
 
-間違いがあれば修正して下さい。
-sandboxで行うテストする場合は、別途upstreamのコマンドが必要です。
+詳細は[redmine](http://redmine.wellco-reins.com　”redmine")で確認
 
 ###事前準備
 1.リモートリポジトリをクローンする
@@ -9,7 +8,12 @@ sandboxで行うテストする場合は、別途upstreamのコマンドが必�
 ```
 　　$ git cloen git@github.com:reinslab/xxxx.git
 ```
-2.クローン直後のブランチの状態を確認する
+2.ローカルに clone された作業ディレクトリに移動する
+```
+　　$cd ec-cube
+```
+
+3.クローン直後のブランチの状態を確認する
 ```
 　　$ git branch -a
 ```
@@ -19,17 +23,22 @@ sandboxで行うテストする場合は、別途upstreamのコマンドが必�
 　　 remotes/origin/HEAD -> origin/develop
 　　 remotes/origin/develop
 　　 remotes/origin/master
-　　 remotes/origin/product
+　　 remotes/origin/production
 ```
-3.upstream（追跡対象）を確認する
+4.production の upstream を設定する
+```
+　　$ git branch production remotes/origin/production
+```
+5.upstream（追跡対象）を確認する
  ```
  　　$ git branch -vv
  ```
 実行結果
  ```
- 　　*develop xxxxxxx [origin/develop] xxxxxxx
+　　*develop 2734366 [origin/develop] xxxxx
+　　 production 77d0fe3 [origin/production] xxxxxx
 ```
-4.git flow を初期化する
+6.git flow を初期化する
 ```
 　　$ git flow init
 ```
