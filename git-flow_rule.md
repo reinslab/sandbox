@@ -8,7 +8,7 @@
 ```
 　　$ git cloen git@github.com:reinslab/xxxx.git
 ```
-クローン直後のブランチの状態を確認する
+2.クローン直後のブランチの状態を確認する
 ```
 　　$ git branch -a
 ```
@@ -20,7 +20,7 @@
 　　 remotes/origin/master
 　　 remotes/origin/product
 ```
-2.upstream（追跡対象）を確認する
+3.upstream（追跡対象）を確認する
  ```
  　　$ git branch -vv
  ```
