@@ -2,7 +2,7 @@
 
 # git コマンド覚書
 
-<div style="text-align: right">2016/08/31 システム 谷口</div>
+<div style="text-align: right">2016/09/01 システム 谷口</div>
 
 ***
 ### エリア遷移とコマンド
@@ -10,16 +10,22 @@
 |:--:|:--:|:--:|:--:|:--:|
 |xxx.html|[`commit`](#commit)|xxx.html|[`add`](#commit)|xxx.html|
 ▲リポジトリへと向かう流れ
+<br />
+<br />
 
 |ワークツリー<br />（変更後）|→|ワークツリー<br />（変更前）|
 |:--:|:--:|:--:|
 |xxx.html|[`checkout --`](#checkout)|xxx.html|
 ▲ワークツリー内での取消し
+<br />
+<br />
 
 |リポジトリ|→|インデックス|→|ワークツリー|
 |:--:|:--:|:--:|:--:|:--:|
 |xxx.html|[`reset --soft HEAD^`](#softhard)<br /><br />[`reset --hard HEAD^`](#softhard)|xxx.html|[`reset HEAD`](#reset)|xxx.html|
 ▲取消しへと向かう流れ
+<br />
+<br />
 
 |リポジトリ|←→|インデックス|
 |:--:|:--:|:--:|
@@ -97,8 +103,8 @@ add したものをまとめて取り下げる場合は、`$ git reset HEAD`と�
 　　$ git reset --hard HEAD^
 ```
 
-`git reset --soft`は、コミット時のワークツリーの内容ををのままで、コミットだけを取り消す。<br />
-`git reset --hard`は、コミットを取り消した上で、ワークツリーの内容も書き換える。
+`git reset --soft`は、コミット時のワークツリーの内容をそのままで、コミットだけを取り消す。<br />
+`git reset --hard`は、コミットを取り消した上で、ワークツリーの内容も書き換える。<br />
 `HEAD^`は直前のコミットを表す。
 <br />
 <br />
