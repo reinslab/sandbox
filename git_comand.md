@@ -24,7 +24,7 @@
 <br />
 
 ### <a name="checkout">変更されたファイルの内容を元に戻す（add前）
-<hr size="1">
+<hr>
 ```
 　　$ git checkout -- <file名>
 ```
@@ -33,7 +33,7 @@
 <br />
 
 ### <a name="reset">add（stage）したファイルをインデックス（stage）から取り下げる -1（unstage）
-<hr size="1">
+<hr>
 ```
 　　$ git reset HEAD <file名>
 ```
@@ -43,7 +43,7 @@ add したものをまとめて取り下げる場合は、`$ git reset HEAD`と�
 <br />
 
 ### add（stage）したファイルをインデックス（stage）から取り下げる -2（unstage）
-<hr size="1">
+<hr>
 ```
 　　$ git rm --cached <file名>
 ```
@@ -56,14 +56,14 @@ add したものをまとめて取り下げる場合は、`$ git reset HEAD`と�
 <br />
 
 ### <a name="commit">add と commit をまとめて行う（コメント付き）
-<hr size="1">
+<hr>
 ```
 　　$ git commit -am "コメント"
 ```
 <br />
 
 ### <a name="amend">直前の commit を修正する
-<hr size="1">
+<hr>
 ```
 　　$ git commit --amend -m "修正コメント"
 ```
@@ -74,7 +74,7 @@ add したものをまとめて取り下げる場合は、`$ git reset HEAD`と�
 <br />
 
 ### <a name="softhard">commit の取り消し
-<hr size="1">
+<hr>
 ```
 　　$ git reset --soft HEAD^
 　　$ git reset --hard HEAD^
@@ -87,7 +87,7 @@ add したものをまとめて取り下げる場合は、`$ git reset HEAD`と�
 <br />
 
 ### commit の log 表示（コミットのハッシュ値を調べてサルベージしたい時）
-<hr size="1">
+<hr>
 ```
 　　$git relog
 ```
@@ -104,4 +104,3 @@ detached HEAD状態で、コミットをした場合、どのブランチにも�
 　　$ git cherry-pick <ハッシュ値>
 ```
 <br />
-***
