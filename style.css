@@ -1,0 +1,12 @@
+.git_photo_img{
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	padding:4px;
+	background:#ffffff;
+	border:1px solid #dddddd;
+}
+hr {
+	border:solid #0808;
+	border-width: 1px 0 0 0;
+}
