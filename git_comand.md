@@ -8,7 +8,7 @@
 ### エリア定義とコマンド
 |リポジトリ|←|インデックス|←|ワークツリー|
 |:--:|:--:|:--:|:--:|:--:|
-|xxx.html|[`commit`](#comand)|xxx.html|[`add`](#comand)|xxx.html|
+|xxx.html|[`commit`](#commit)|xxx.html|[`add`](#commit)|xxx.html|
 
 
 |リポジトリ|→|インデックス|→|ワークツリー<br />（変更後）|→|ワークツリー<br />（変更前）|
@@ -43,7 +43,7 @@ add したものをまとめて取り下げる場合は、`$ git reset HEAD`と�
 `--cached`オプションをつけ忘れるとファイルも削除されてしまうので、上の`reset`の方が安全。
 <br />
 
-### <a name="comad">add と commit をまとめて行う（コメント付き）
+### <a name="commit">add と commit をまとめて行う（コメント付き）
 ```
 　　$ git commit -am "コメント"
 ```
