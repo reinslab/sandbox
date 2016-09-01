@@ -8,12 +8,12 @@
 ### エリア定義とコマンド
 |リポジトリ|←|インデックス|←|ワークツリー|
 |:--:|:--:|:--:|:--:|:--:|
-|xxx.html|[`commit`](#comadd)|xxx.html|[`add`](#comadd)|xxx.html|
+|xxx.html|[`commit`](#comand)|xxx.html|[`add`](#comand)|xxx.html|
 
 
 |リポジトリ|→|インデックス|→|ワークツリー<br />（変更後）|→|ワークツリー<br />（変更前）|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-|xxx.html|[`reset --soft HEAD^`](#resets)<br /><br />[`reset --hard HEAD^`](#resets)<br /><br />[`commit --amend`](#amend)|xxx.html|[`reset HEAD`](#reset)|xxx.html|[`checkout --`](#checkout)|xxx.html|
+|xxx.html|[`reset --soft HEAD^`](#softhard)<br /><br />[`reset --hard HEAD^`](#softhard)<br /><br />[`commit --amend`](#amend)|xxx.html|[`reset HEAD`](#reset)|xxx.html|[`checkout --`](#checkout)|xxx.html|
 
 <br />
 
@@ -58,7 +58,7 @@ add したものをまとめて取り下げる場合は、`$ git reset HEAD`と�
 　　直前のコミットコメントを修正したい。
 <br />
 
-### <a name="resets">commit の取り消し
+### <a name="softhard">commit の取り消し
 ```
 　　$ git reset --soft HEAD^
 　　$ git reset --hard HEAD^
