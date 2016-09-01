@@ -5,21 +5,28 @@
 <div style="text-align: right">2016/08/31 システム 谷口</div>
 
 ***
-### エリア定義とコマンド
+### エリア遷移とコマンド
 |リポジトリ|←|インデックス|←|ワークツリー|
 |:--:|:--:|:--:|:--:|:--:|
 |xxx.html|[`commit`](#commit)|xxx.html|[`add`](#commit)|xxx.html|
-
+▲リポジトリへと向かう流れ
 
 |ワークツリー<br />（変更後）|→|ワークツリー<br />（変更前）|
 |:--:|:--:|:--:|
 |xxx.html|[`checkout --`](#checkout)|xxx.html|
-
+▲ワークツリー内での取消し
 
 |リポジトリ|→|インデックス|→|ワークツリー|
 |:--:|:--:|:--:|:--:|:--:|
-|xxx.html|[`reset --soft HEAD^`](#softhard)<br /><br />[`reset --hard HEAD^`](#softhard)<br /><br />[`commit --amend`](#amend)|xxx.html|[`reset HEAD`](#reset)|xxx.html|
-※矢印はエリアの遷移を示す。<br />
+|xxx.html|[`reset --soft HEAD^`](#softhard)<br /><br />[`reset --hard HEAD^`](#softhard)|xxx.html|[`reset HEAD`](#reset)|xxx.html|
+▲取消しへと向かう流れ
+
+|リポジトリ|←→|インデックス|
+|:--:|:--:|:--:|
+|xxx.html|[`commit --amend`](#amend)|xxx.html|
+▲直前のコミットを取消して再コミット<br />
+
+*※表中のコマンドをクリックで詳細表示*
 
 <br />
 
