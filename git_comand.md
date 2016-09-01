@@ -4,9 +4,8 @@
 
 <div style="text-align: right">2016/08/31 システム 谷口</div>
 
-
-### エリア定義とコマンド
 ***
+### エリア定義とコマンド
 |リポジトリ|←|インデックス|←|ワークツリー|
 |:--:|:--:|:--:|:--:|:--:|
 |xxx.html|[`commit`](#commit)|xxx.html|[`add`](#commit)|xxx.html|
@@ -23,18 +22,16 @@
 ※矢印はエリアの遷移を示す。<br />
 
 <br />
-
-### <a name="checkout">変更されたファイルの内容を元に戻す（add前）
 ***
+### <a name="checkout">変更されたファイルの内容を元に戻す（add前）
 ```
 　　$ git checkout -- <file名>
 ```
 ワークツリーで変更した、まだインデックス（stage）に登録されていないファイルを元に戻す。
 <br />
 <br />
-
-### <a name="reset">add（stage）したファイルをインデックス（stage）から取り下げる -1（unstage）
 ***
+### <a name="reset">add（stage）したファイルをインデックス（stage）から取り下げる -1（unstage）
 ```
 　　$ git reset HEAD <file名>
 ```
@@ -42,9 +39,8 @@
 add したものをまとめて取り下げる場合は、`$ git reset HEAD`とする。（HEADは省略可能）
 <br />
 <br />
-
-### add（stage）したファイルをインデックス（stage）から取り下げる -2（unstage）
 ***
+### add（stage）したファイルをインデックス（stage）から取り下げる -2（unstage）
 ```
 　　$ git rm --cached <file名>
 ```
@@ -55,16 +51,14 @@ add したものをまとめて取り下げる場合は、`$ git reset HEAD`と�
 `--cached`オプションをつけ忘れるとファイルも削除されてしまうので、上の`reset`の方が安全。
 <br />
 <br />
-
-### <a name="commit">add と commit をまとめて行う（コメント付き）
 ***
+### <a name="commit">add と commit をまとめて行う（コメント付き）
 ```
 　　$ git commit -am "コメント"
 ```
 <br />
-
-### <a name="amend">直前の commit を修正する
 ***
+### <a name="amend">直前の commit を修正する
 ```
 　　$ git commit --amend -m "修正コメント"
 ```
@@ -73,9 +67,8 @@ add したものをまとめて取り下げる場合は、`$ git reset HEAD`と�
 　　直前のコミットコメントを修正したい。
 <br />
 <br />
-
-### <a name="softhard">commit の取り消し
 ***
+### <a name="softhard">commit の取り消し
 ```
 　　$ git reset --soft HEAD^
 　　$ git reset --hard HEAD^
@@ -86,9 +79,8 @@ add したものをまとめて取り下げる場合は、`$ git reset HEAD`と�
 `HEAD^`は直前のコミットを表す。
 <br />
 <br />
-
-### commit の log 表示（コミットのハッシュ値を調べてサルベージしたい時）
 ***
+### commit の log 表示（コミットのハッシュ値を調べてサルベージしたい時）
 ```
 　　$git relog
 ```
@@ -105,3 +97,4 @@ detached HEAD状態で、コミットをした場合、どのブランチにも�
 　　$ git cherry-pick <ハッシュ値>
 ```
 <br />
+***
