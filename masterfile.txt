@@ -1,1 +1,3 @@
 masterファイルを追加
+
+hotfix ブランチを切るとmasterブランチでの作業となる
